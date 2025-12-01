@@ -1,5 +1,6 @@
 public class Policy
 {
+    private static int policyCount = 0;
     private int policyNumber;
     private String providerName;
     private PolicyHolder holder;  // HAS-A relationship
@@ -10,12 +11,17 @@ public class Policy
         this.policyNumber = policyNumber;
         this.providerName = providerName;
         this.holder = holder;
+        policyCount++;
     }
 
     // Getters
     public int getPolicyNumber() { return policyNumber; }
     public String getProviderName() { return providerName; }
     public PolicyHolder getPolicyHolder() { return holder; }
+    public static int getPolicyCount()
+{
+    return policyCount;
+}
 
     // PRICE CALCULATION
     public double calculatePolicyPrice()
