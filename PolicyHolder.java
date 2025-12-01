@@ -64,3 +64,12 @@ public String toString()
            "\nPolicyholder's Weight: " + weight + " pounds" +
            "\nPolicyholder's BMI: " + String.format("%.2f", getBMI());
 }
+
+public PolicyHolder(PolicyHolder other)
+{
+    this.firstName = other.firstName;
+    this.lastName = other.lastName;
+    this.age = other.age;
+    this.smokingStatus = other.smokingStatus;
+    this.height = other.height;
+    this.weight = other.weight;
